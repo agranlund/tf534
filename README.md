@@ -1,5 +1,7 @@
 # Terriblefire TF534 
 
+Where this BOM differs from the schematic use the BOM value. 
+
 |                  |                   |                         |                        |                                   |
 |------------------|-------------------|-------------------------|------------------------|-----------------------------------|
 | "Part"           | "Value"           | "Device"                | "Package"              | "Description"                     |
