@@ -58,9 +58,9 @@ Where this BOM differs from the schematic use the BOM value.
 | "R1"             | "2K2"             | "0.05OHM-1/5W-1%(0603)" | "0603"                 | "RES-12535"                       |
 | "R2"             | "2K2"             | "0.05OHM-1/5W-1%(0603)" | "0603"                 | "RES-12535"                       |
 | "R3"             | "47K"             | "RESISTOR1206"          | "1206"                 | "Resistors"                       |
-| "RN1"            | "CAY16-103J4LF"   | "CAY16-103J4LF"         | "RESCAXE80P320X160-8N" | "Res Thick Film Array 10K Ohm"    |
-| "RN2"            | "CAY16-103J4LF"   | "CAY16-103J4LF"         | "RESCAXE80P320X160-8N" | "Res Thick Film Array 10K Ohm"    |
-| "RN3"            | "CAY16-103J4LF"   | "CAY16-103J4LF"         | "RESCAXE80P320X160-8N" | "Res Thick Film Array 10K Ohm"    |
+| "RN1"            | "CAY16-222J4LF"   | "CAY16-222J4LF"         | "RESCAXE80P320X160-8N" | "Res Thick Film Array 2K2 Ohm"    |
+| "RN2"            | "CAY16-222J4LF"   | "CAY16-222J4LF"         | "RESCAXE80P320X160-8N" | "Res Thick Film Array 2K2 Ohm"    |
+| "RN3"            | "CAY16-222J4LF"   | "CAY16-222J4LF"         | "RESCAXE80P320X160-8N" | "Res Thick Film Array 2K2 Ohm"    |
 | "SPIPORT"        | "SPI PORT"        | "PINHD-2X6"             | "2X06"                 | "PIN HEADER"                      |
 | "SPI_INT"        | "NONE"            | "PINHD-1X1"             | "1X01"                 | "PIN HEADER"                      |
 | "U1"             | "3.3V SPI Flash"  | "SPI_FLASH-X25XXSMD"    | "SO08"                 | "32M Serial Flash Memory"         |
