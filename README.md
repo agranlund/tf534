@@ -63,7 +63,7 @@ Where this BOM differs from the schematic use the BOM value.
 | "RN3"            | "CAY16-222J4LF"   | "CAY16-222J4LF"         | "RESCAXE80P320X160-8N" | "Res Thick Film Array 2K2 Ohm"    |
 | "SPIPORT"        | "SPI PORT"        | "PINHD-2X6"             | "2X06"                 | "PIN HEADER"                      |
 | "SPI_INT"        | "NONE"            | "PINHD-1X1"             | "1X01"                 | "PIN HEADER"                      |
-| "U1"             | "3.3V SPI Flash"  | "SPI_FLASH-X25XXSMD"    | "SO08"                 | "32M Serial Flash Memory"         |
+| "U1"             | "3.3V SPI Flash"  | "SST26VF016B"           | "SO08"                 | "32M Serial Flash Memory"         |
 | "X1"             | "MC68000"         | "MC68000P"              | "DIL64"                | "68xxx PROCESSOR"                 |
 | "XC9572XL(BUS)"  | "XC9572XL-VQ64"   | "XC9572XL-VQ64"         | "VQ64"                 |                                   |
 | "XC95144XL(RAM)" | "XC95144XL-TQ100" | "XC95144XL-TQ100"       | "TQFP100"              |                                   |
