@@ -35,6 +35,7 @@ Where this BOM differs from the schematic use the BOM value.
 | "C28"            | "0.1uF"           | "CAP_0603_X7R"          | "0603"                 |                                   |
 | "C29"            | "0.1uF"           | "CAP_0603_X7R"          | "0603"                 |                                   |
 | "C30"            | "0.1uF"           | "CAP_0603_X7R"          | "0603"                 |                                   |
+| "C31"            | "10uF"            | "CAP_1206_X7R"          | "1206"                 | "Ceramic Capacitors"              |
 | "IC1"            | "MC68030RC"       | "68030"                 | "MPGA128"              | "MOTOROLA"                        |
 | "IC2"            | "MC68881FN-SOC"   | "68882"                 | "PLCC68-S"             | "unknown"                         |
 | "IC3"            | "LM1117-3.3"      | "V_REG_LM1117SOT223"    | "SOT223"               | "Voltage Regulator LM1117"        |
