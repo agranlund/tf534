@@ -1,5 +1,7 @@
 # Terriblefire TF534 
 
+The TF534 doesnt work under 25Mhz. The firmware is designed to work between 25Mhz and 50Mhz. Its optimized for 50Mhz & 33Mhz.
+
 Where this BOM differs from the schematic use the BOM value. 
 
 |                  |                   |                         |                        |                                   |
