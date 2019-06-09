@@ -1,0 +1,67 @@
+# Copyright (C) 2016-2019, Stephen J. Leary
+# All rights reserved.
+# 
+# This file is part of  TF534 (Terrible Fire 030 Accelerator).
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; version 2 only.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+
+#Clocks
+NET "CLKCPU"    LOC = "P44" ;
+NET "CLKCPU" BUFG=CLK;
+
+NET "CLK7M"    LOC = "P43" ;
+NET "CLK7M" BUFG=CLK;
+
+# 68K Signals
+NET "VPA"    LOC = "P42";
+NET "AS"     LOC = "P41";
+NET "UDS"    LOC = "P40";
+NET "LDS"    LOC = "P39";
+NET "RW"     LOC = "P38";
+NET "DTACK"  LOC = "P37";
+NET "BG"     LOC = "P36";
+NET "BGACK"  LOC = "P34";
+NET "VMA"    LOC = "P02" ;
+NET "E"      LOC = "P03" ;
+NET "BERR"   LOC = "P22";
+
+NET "A<0>"    LOC = "P32";
+NET "A<16>"	  LOC = "P12";
+NET "A<17>"	  LOC = "P07";
+NET "A<18>"	  LOC = "P05";
+NET "A<19>"	  LOC = "P06";
+
+# 68020 Signals
+
+NET "HALT"	  LOC = "P20";
+NET "RESET"   LOC = "P33" ;
+NET "HIGH"	  LOC = "P08" ; // do not drive low.
+
+#NET "NC<0>"	  LOC = "P13" ;
+#NET "NC<1>"	  LOC = "P14" ;
+
+NET "BG20"	  LOC = "P01" ;
+NET "DSACK1"  LOC = "P21" ;
+NET "RW20"    LOC = "P19";
+NET "AS20"	  LOC = "P18" ;
+NET "DS20"	  LOC = "P16" ;
+
+NET "AVEC"	  LOC = "P27" ;
+NET "SIZ<1>"  LOC = "P28" ;
+NET "SIZ<0>"  LOC = "P29" ;
+
+NET "FC<0>"   LOC = "P31"  ;
+NET "FC<1>"	  LOC = "P23" ;
+NET "FC<2>"	  LOC = "P30" ;

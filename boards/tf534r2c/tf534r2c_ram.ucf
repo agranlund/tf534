@@ -1,0 +1,106 @@
+# Copyright (C) 2016-2019, Stephen J. Leary
+# All rights reserved.
+# 
+# This file is part of  TF534 (Terrible Fire 030 Accelerator).
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; version 2 only.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+
+#Clocks
+NET "CLKCPU"      LOC="22";
+NET "CLKCPU" BUFG=CLK;
+NET "CLKCPU" TNM_NET = "CLKCPU"; # gives the net clk a group name as CLKCPU
+TIMESPEC "TS_CLKCPU" = PERIOD "CLKCPU" 12 ns ; # add 20 ns PERIOD constraint the
+#OFFSET = IN 15 ns VALID 5ns BEFORE "CLKCPU" ; # add  offset in constraint
+OFFSET = OUT 5 ns AFTER "CLKCPU" ; # add  offset out constraint
+
+NET "A<0>"       LOC="23";
+NET "A<1>"       LOC="25";
+NET "A<2>"       LOC="52";
+NET "A<3>"       LOC="50";
+NET "A<4>"       LOC="96";
+NET "A<5>"       LOC="97";
+NET "A<6>"       LOC="2";
+NET "A<8>"       LOC="1";
+NET "A<12>"      LOC="68";
+NET "A<13>"      LOC="67";
+NET "A<15>"      LOC="99";
+NET "A<16>"      LOC="86";
+NET "A<17>"      LOC="80";
+NET "A<18>"      LOC="79";
+NET "A<19>"      LOC="78";
+NET "A<20>"      LOC="82";
+NET "A<21>"      LOC="81";
+NET "A<22>"      LOC="54";
+NET "A<23>"      LOC="53";
+NET "A<24>"      LOC="16";
+NET "A<25>"      LOC="14";
+NET "A<26>"      LOC="15";
+NET "A<27>"      LOC="13";
+NET "A<28>"      LOC="17";
+NET "A<29>"      LOC="18";
+NET "A<30>"      LOC="19";
+NET "A<31>"      LOC="20";
+NET "AS20"       LOC="10";
+NET "CBACK"      LOC="12";
+NET "CBREQ"      LOC="9";
+NET "CIIN"       LOC="7";
+
+NET "D<0>"       LOC="29";
+NET "D<1>"       LOC="30";
+NET "D<2>"       LOC="33";
+NET "D<3>"       LOC="35";
+NET "D<4>"       LOC="36";
+NET "D<5>"       LOC="39";
+NET "D<6>"       LOC="40";
+NET "D<7>"       LOC="34";
+NET "D<8>"       LOC="32";
+NET "D<9>"       LOC="28";
+NET "D<10>"      LOC="27";
+NET "D<11>"      LOC="37";
+NET "D<12>"      LOC="94";
+NET "D<13>"      LOC="93";
+NET "D<14>"      LOC="92";
+NET "D<15>"      LOC="95";
+
+NET "DS20"       LOC="8";
+NET "DTACK"      LOC="58";
+NET "HOLD"       LOC="56";
+NET "IDEINT"     LOC="49";
+NET "IDEWAIT"    LOC="46";
+NET "INT2"       LOC="42";
+NET "INTCYCLE"   LOC="43";
+NET "RW20"       LOC="4";
+NET "RAMA<2>"    LOC="76";
+NET "RAMA<3>"    LOC="77";
+NET "RAMCS<0>"   LOC="91";
+NET "RAMCS<1>"   LOC="90";
+NET "RAMCS<2>"   LOC="89";
+NET "RAMCS<3>"   LOC="87";
+NET "RAMOE"      LOC="85";
+NET "RESET"      LOC="24";
+#NET "ROMEN<0>"  LOC="66";
+#NET "ROMEN<1>"  LOC="64";
+NET "SIZ<0>"     LOC="6";
+NET "SIZ<1>"     LOC="3";
+NET "SLOWCYCLE"  LOC="60";
+NET "SPI_CLK"    LOC="71";
+NET "SPI_CS<0>"  LOC="73";
+NET "SPI_CS<1>"  LOC="74";
+NET "SPI_WCS"    LOC="55";
+#NET "SPI_INT"   LOC="65";
+NET "SPI_MISO"   LOC="72";
+NET "SPI_MOSI"   LOC="70";
+NET "STERM"      LOC="11";
+NET "WRITEPROT"  LOC="59";

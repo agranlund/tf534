@@ -1,0 +1,83 @@
+# Copyright (C) 2016-2019, Stephen J. Leary
+# All rights reserved.
+# 
+# This file is part of  TF534 (Terrible Fire 030 Accelerator).
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; version 2 only.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+
+#Clocks
+NET "CLKCPU"		LOC="16";
+NET "CLKCPU" BUFG=CLK;
+NET "CLKCPU" TNM_NET = "CLKCPU"; # gives the net clk a group name as CLKCPU
+TIMESPEC "TS_CLKCPU" = PERIOD "CLKCPU" 20 ns ; # add 20 ns PERIOD constraint the
+OFFSET = IN 15 ns VALID 10 ns BEFORE "CLKCPU" ; # add  offset in constraint
+OFFSET = OUT 15 ns AFTER "CLKCPU" ; # add  offset out constraint
+NET "CLK7M"		LOC="15";
+NET "CLK7M" BUFG=CLK;
+NET "CLK7M" TNM_NET = "CLK7M"; # gives the net clk a group name as CLK7M
+TIMESPEC "TS_CLK7M" = PERIOD "CLK7M" 139 ns ; # add 139 ns PERIOD constraint the
+#Created by Constraints Editor (xc9572xl-vq64-10) - 2018/04/08
+OFFSET = IN 20 ns VALID 10 ns BEFORE "CLK7M"; # add  offset in constraint
+OFFSET = OUT 15 ns AFTER "CLK7M" ; # add  offset out constraint
+NET "A<0>"      LOC="39";
+NET "A<1>"      LOC="35";
+NET "A<2>"      LOC="18";
+NET "A<3>"      LOC="17";
+NET "A<5>"      LOC="43";
+NET "A<12>"      LOC="42";
+NET "A<15>"      LOC="44";
+NET "A<16>"      LOC="45";
+NET "A<17>"      LOC="46";
+NET "A<18>"      LOC="47";
+NET "A<19>"      LOC="48";
+NET "A<20>"      LOC="49";
+NET "A<21>"      LOC="50";
+NET "A<22>"      LOC="51";
+NET "A<23>"      LOC="52";
+NET "AS"      LOC="6";
+NET "AS20"      LOC="22";
+NET "AVEC"      LOC="34";
+NET "BERR"      LOC="27";
+NET "BG"      LOC="11";
+NET "BG20"      LOC="32";
+NET "BGACK"      LOC="12";
+NET "BUSEN"      LOC="60";
+NET "CPCS"      LOC="5";
+NET "CPSENSE"      LOC="23";
+NET "DS20"      LOC="19";
+NET "DSACK1"      LOC="4";
+NET "DTACK"      LOC="10";
+NET "E"      LOC="24";
+NET "FC<0>"      LOC="40";
+NET "FC<1>"      LOC="33";
+NET "FC<2>"      LOC="31";
+NET "IDECS<0>"      LOC="62";
+NET "IDECS<1>"      LOC="61";
+NET "IDEWAIT"      LOC="63";
+NET "INT2"      LOC="59";
+NET "INTCYCLE"      LOC="56";
+NET "IOR"      LOC="1";
+NET "IOW"      LOC="2";
+NET "IPL<1>"      LOC="57";
+NET "IPL<2>"      LOC="58";
+NET "LDS"      LOC="8";
+NET "RW"      LOC="9";
+NET "RW20"      LOC="13";
+NET "SIZ<0>"      LOC="36";
+NET "SIZ<1>"      LOC="38";
+NET "SLOWCYCLE"      LOC="64";
+NET "UDS"      LOC="7";
+NET "VMA"      LOC="20";
+NET "VPA"      LOC="25";
