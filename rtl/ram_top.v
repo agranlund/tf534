@@ -73,6 +73,8 @@ reg STERM_D2 = 1'b1;
 wire ROM_ACCESS = (A[23:19] != {4'hF, 1'b1}) | AS20;
 
 // produce an internal data strobe
+
+`ifndef ATARI
 wire GAYLE_INT2;
 
 wire INT2_STERM;
@@ -116,6 +118,19 @@ gayle GAYLE(
 
 );
 
+`else
+
+wire GAYLE_INT2 = IDEINT ? 1'b0 : 1'bz;
+
+wire INT2_STERM = 1'b1;
+wire INT2_INTCYCLE = 1'b1;
+wire INT2_IDEWAIT = 1'b1;
+
+reg gayle_access = 1'b1;
+wire gayle_decode = 1'b1;
+wire gayle_dout = 1'b0;
+
+`endif
 
 reg spi_access = 1'b1;
 wire spi_decode;

@@ -23,6 +23,10 @@ ifndef OPTMODE
        OPTMODE:=Area
 endif
 
+ifndef TARGET
+       TARGET=AMIGA
+endif
+
 ifdef NOWAIT
 PARAMS:=-generics NOWAIT=1
 endif
@@ -62,7 +66,7 @@ PB=$(WD)/$(PN)
 # Output configuration file
 OUTPUT=$(PN).svf
 
-XSTFLAGS=-opt_mode $(OPTMODE) -opt_level 2 -verilog2001 YES -keep_hierarchy No -netlist_hierarchy As_Optimized -rtlview Yes -hierarchy_separator / -bus_delimiter <> -case Maintain -fsm_extract YES -fsm_encoding Auto -safe_implementation No -mux_extract Yes -resource_sharing YES -iobuf YES -pld_mp YES -pld_xp YES -pld_ce YES -wysiwyg NO -equivalent_register_removal YES 
+XSTFLAGS=-define {$(TARGET)} -opt_mode $(OPTMODE) -opt_level 2 -verilog2001 YES -keep_hierarchy No -netlist_hierarchy As_Optimized -rtlview Yes -hierarchy_separator / -bus_delimiter <> -case Maintain -fsm_extract YES -fsm_encoding Auto -safe_implementation No -mux_extract Yes -resource_sharing YES -iobuf YES -pld_mp YES -pld_xp YES -pld_ce YES -wysiwyg NO -equivalent_register_removal YES 
 CPLDFITFLAGS=-slew slow -power std -terminate float -unused float -optimize $(OPTIMIZE) -pterms 50 -loc on -keepio -exhaust
 
 .PHONY: all clean

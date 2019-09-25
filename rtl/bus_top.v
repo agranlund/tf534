@@ -105,10 +105,12 @@ wire IACK = CPUSPACE & ({A[19:16]} === {4'b1111});
 wire BUS_BUSY = BGACK & BGACK_INT;
 wire HIGHZ = ~BUS_BUSY | ~INTCYCLE | ~GAYLE_IDE;
 
+`ifndef ATARI
 reg INT2_ASSERT = 1'b0;
 reg INT2_INT = 1'b0;
 reg INT2_IACK_INT = 1'b0;
 wire INT2_IACK = IACK & ({A[3:1]} == 3'b010) & ~AS20;
+`endif
 
 wire DSACK1_SYNC;
 wire VMA_SYNC;
@@ -296,6 +298,8 @@ always @(posedge CLKCPU or posedge AS20) begin
 
 end
 
+`ifndef ATARI
+
 always @(posedge CLKCPU) begin
 
     // INTCYCLE USED TO SHUT OFF THE BUS
@@ -319,6 +323,17 @@ always @(negedge INT2_INT, posedge INT2_IACK_INT) begin
 
 end
 
+`else
+
+always @(posedge CLKCPU) begin
+
+    // INTCYCLE USED TO SHUT OFF THE BUS
+    BUSEN_D <= ~INTCYCLE | AS_INT;
+end
+
+`endif
+
+
 wire VMA_INT = VMA_SYNC;
 
 assign RW =   HIGHZ ? 1'bz : RW_INT;
@@ -335,6 +350,11 @@ assign AVEC = AVEC_INT;
 assign BERR = (CPCS_INT | ~CPSENSE) ? 1'bz : 1'b0;
 assign CPCS = CPCS_INT;
 assign BUSEN = BUSEN_D;
+
+`ifndef ATARI
 assign IPL[2:1] = INT2_ASSERT ? {2'b10} : {2'bzz};
+`else
+assign IPL[2:1] = {2'bzz};
+`endif
 
 endmodule

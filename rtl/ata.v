@@ -55,7 +55,11 @@ WAIT                         \_____/
 */
 
 // decode directly from AS and Address Bus.
+`ifndef ATARI
 wire GAYLE_IDE = ({A[23:15]} != {8'hDA,1'b0});
+`else
+wire GAYLE_IDE = ({A[23:16]} != {8'hF0});
+`endif
 
 reg ASDLY = 1'b1;
 reg ASDLY2 = 1'b1;
@@ -102,7 +106,12 @@ assign IOR = IOR_INT;
 assign IOW = IOW_INT ;
 assign DTACK = DTACK_INT;
 
+`ifndef ATARI
 assign IDECS = A[12] ? {GAYLE_IDE, 1'b1} : {1'b1, GAYLE_IDE};
+`else
+assign IDECS = A[5] ? {GAYLE_IDE, 1'b1} : {1'b1, GAYLE_IDE};
+`endif
+
 assign ACCESS = GAYLE_IDE;
 
 

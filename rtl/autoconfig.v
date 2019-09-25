@@ -136,7 +136,11 @@ end
 // decode the base addresses
 // these are hardcoded to the address they always get assigned to.
 assign DECODE[SPI_CARD] = ({A[31:16]} != {16'h00e9}) | shutup[SPI_CARD];
+`ifndef ATARI
 assign DECODE[RAM_CARD] = ({A[31:24]} != {8'h40}) | shutup[RAM_CARD];
+`else
+assign DECODE[RAM_CARD] = ({A[31:22]} != {8'h01, 2'b00}) | shutup[RAM_CARD];    // 4MB TT-RAM
+`endif
 
 assign ACCESS = Z2_ACCESS;
 assign DOUT = data_out;
