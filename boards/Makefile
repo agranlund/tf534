@@ -4,7 +4,7 @@ endif
 export TARGET
 
 ifeq ($(TARGET), ATARI)
-BOARDS:=tf534r2c
+BOARDS:=tf534r2c tf530r3
 else
 BOARDS:=tf520 tf530r2 tf530r3 tf534r2c
 endif
