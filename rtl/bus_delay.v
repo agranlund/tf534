@@ -26,8 +26,12 @@ module bus_delay(
         input DTACK,
         output OUT
         );
-   
+
+`ifndef ATARI
 parameter DELAYS = 10;
+`else		
+parameter DELAYS = 1;
+`endif 
  
    wire [DELAYS:0] dtack_int;
    
