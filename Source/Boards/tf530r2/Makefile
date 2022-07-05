@@ -1,7 +1,7 @@
 REVISION=2
 BOARD=tf530
 
-RTLFOLDER=../../rtl/
+RTLFOLDER=../../Runtime/
 BUSSOURCES="./$(BOARD)r$(REVISION)_bus_top.v $(RTLFOLDER)/bus_top.v  $(RTLFOLDER)/m6800.v $(RTLFOLDER)/ata.v  $(RTLFOLDER)/bus_delay.v"
 RAMSOURCES="./$(BOARD)r$(REVISION)_ram_top.v $(RTLFOLDER)/ram_top.v $(RTLFOLDER)/fastram.v $(RTLFOLDER)/gayle.v $(RTLFOLDER)/zxmmc.v $(RTLFOLDER)/autoconfig_zii.v"
 
