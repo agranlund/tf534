@@ -68,6 +68,6 @@ With this firmware, it can work from  `25Mhz`  up to <br>
 
 <!----------------------------------------------------------------------------->
 
-[Badge License]: https://img.shields.io/badge/License-GPL_2-blue.svg?style=for-the-badge
+[Badge License]: https://img.shields.io/badge/License-GPL2-015d93.svg?style=for-the-badge&labelColor=blue
 
 [License]: LICENSE
