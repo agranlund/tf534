@@ -5,7 +5,7 @@ ifndef TARGET
 	TARGET=AMIGA
 endif
 
-RTLFOLDER=../../rtl/
+RTLFOLDER=../../Runtime/
 BUSSOURCES="$(RTLFOLDER)/bus_top.v  $(RTLFOLDER)/m6800.v $(RTLFOLDER)/ata.v  $(RTLFOLDER)/bus_delay.v"
 RAMSOURCES="$(RTLFOLDER)/ram_top.v $(RTLFOLDER)/fastram.v $(RTLFOLDER)/gayle.v $(RTLFOLDER)/zxmmc.v $(RTLFOLDER)/autoconfig.v $(RTLFOLDER)/intreqr.v"
 
